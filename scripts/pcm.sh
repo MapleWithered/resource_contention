@@ -18,3 +18,11 @@ done
 
 sudo /home/tzhang/pcm/build/bin/pcm-pcie -csv="pcm-pcie.csv" &
 sudo /home/tzhang/pcm/build/bin/pcm-memory -csv="pcm-memory.csv" &
+
+sleep 300
+
+echo -e "Measurement finished!"
+
+sudo killall pcm
+sudo killall pcm-memory
+sudo killall pcm-pcie
