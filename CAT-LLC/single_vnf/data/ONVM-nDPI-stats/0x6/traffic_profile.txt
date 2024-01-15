@@ -1,0 +1,3 @@
+[Device: id=0] TX: 5.62 (StdDev 0.04) Mpps, 2879 (StdDev 18) Mbit/s (3779 Mbit/s with framing), total 2638614503 packets with 168877668968 bytes (incl. CRC)
+[Device: id=1] RX: 5.50 (StdDev 0.08) Mpps, 2816 (StdDev 40) Mbit/s (3696 Mbit/s with framing), total 2571403099 packets with 164576000416 bytes (incl. CRC)
+Samples: 258420, Average: 552745.4 ns, StdDev: 1681497.5 ns, Quartiles: 8361.0/11712.0/15875.0 ns
