@@ -1,16 +1,16 @@
 #!/bin/bash
 
 cores=4
-vnfs=l3fwd
+vnfs=l2fwd
 end=$((SECONDS+120))
 params=("0x600" "0x300" "0x180" "0xc0" "0x60" "0x30" "0x18" "0xc" "0x6" "0x3")
-> tmp.csv
+>tmp_${vnfs}_${param}.csv
 
 cd /home/qiong/Splash-3-3.0/codes/apps/water-nsquared
 
 for param in "${params[@]}"; do
     # clear or create a new CSV file for each iteration
-    > ~/resource_contention/DDIO/way_allocated_sensitive/tmp_${param}.csv
+    > ~/resource_contention/DDIO/way_allocated_sensitive/tmp_${vnfs}_${param}.csv
 
     # set pqos llcway parameters
     sudo pqos -e "llc:2=${param}"
