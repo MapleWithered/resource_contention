@@ -2,8 +2,8 @@
 
 cores=4
 vnfs=l3fwd
-end=$((SECONDS+60))
-params=("0c600" "0x300" "0x180" "0xc0" "0x60" "0x30" "0x18" "0xc" "0x6" "0x3")
+end=$((SECONDS+120))
+params=("0x600" "0x300" "0x180" "0xc0" "0x60" "0x30" "0x18" "0xc" "0x6" "0x3")
 > tmp.csv
 
 cd /home/qiong/Splash-3-3.0/codes/apps/water-nsquared
@@ -16,7 +16,7 @@ for param in "${params[@]}"; do
     sudo pqos -e "llc:2=${param}"
 
     # reset timer
-    end=$((SECONDS+60))
+    end=$((SECONDS+120))
 
     while [ $SECONDS -lt $end ]; do
         #  run main code and save ooutput
